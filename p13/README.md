@@ -1,3 +1,3 @@
 # skip  
-i did same problem in p11.  
+i did this problem same way in p11.  
 
