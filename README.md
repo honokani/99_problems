@@ -27,7 +27,7 @@
 
          `combination 1 "abc"` -> `[("a","bc"),("b","ac"),("c","ab")]`  
 
-      +  wrong1  
+      +  wrong answer 1  
 
              combination :: Int -> [a] -> [([a],[a])]
              combination 0 xs = [([],xs)]
@@ -37,9 +37,9 @@
                        rests  = [(ra, x:rb) | (ra,rb) <- combination n xs]
 
          `combination 1 "abc"` -> `[("a","bc"),("b","ac"),("c","ab"),("","abc")]`  
-         this program means not *choose 2* but *choose less than 2*  
+         this program means not *choose 1*, but *choose less than 1*  
 
-      +  wrong2  
+      +  wrong answer 2  
 
              combination :: Int -> [a] -> [([a],[a])]
              combination _ [] = []        -- here is switched
