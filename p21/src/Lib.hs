@@ -9,7 +9,7 @@ solveP21 = do
 
 insertAt :: a -> [a] -> Int -> [a]
 insertAt x [] 1 = [x]
-insertAt _ [] _ = error "Out of bound!"
+insertAt _ [] _ = error "Out of bounds!"
 insertAt x ally@(y:ys) n
     | n==1       = x : ally
     | otherwise  = y : insertAt x ys (n-1)
