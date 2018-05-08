@@ -1,5 +1,5 @@
-module Lib
-    ( solveP31
+module Lib_p31
+    ( pCandidates
     ) where
 
 solveP31 :: IO ()
@@ -10,7 +10,7 @@ solveP31 = do
 isPrime :: (Integral a) => a -> Bool
 isPrime n = (==[]) $ filter ((==0).(mod n)) $ pCandidates n
 
-pCandidates :: (Integral a) =>  a -> [a]
+pCandidates :: (Integral a) => a -> [a]
 pCandidates n = takeWhile (<= (getSquareN n)) primes
 
 getSquareN :: (Integral a) => a -> a
