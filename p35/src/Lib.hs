@@ -5,8 +5,7 @@ module Lib
 import Lib_p31 as P31
 
 solveP35 :: IO ()
-solveP35 = do
-    print $ primeFactors 315
+solveP35 = print $ primeFactors 315
 
 primeFactors :: (Integral a) => a -> [a]
 primeFactors n = primeFactorsCore n $ P31.pCandidates n
