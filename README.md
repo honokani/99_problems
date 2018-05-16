@@ -6,7 +6,7 @@
 
 # memo  
    *  not exist  
-      No.29 and No.30 does not exist  
+      No.29, No.30, No.42-45 does not exist  
    *  p17  
       +  arrow op `&&&` in `Control.Arrow`  
          -  `(&&&) :: a b c -> a b c' -> a b (c, c')`  
