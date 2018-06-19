@@ -53,5 +53,9 @@
          `combination 1 "abc"` -> `[("a","bc"),("b","ac")]`  
          this program finish too short step.  
 
+   *  p67  
+      +  This code needs `do` in line:36.  
+         I dont know why need it in here.(line:38 doesnt need `do`)  
+         Someone, please tell me why.  
 
 
