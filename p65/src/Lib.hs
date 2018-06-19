@@ -21,15 +21,15 @@ data Tree a = E
 
 layoutBinalyTree65 :: (Integral a, Bounded a) => Tree b -> Tree (b,(a,a))
 layoutBinalyTree65 E = E
-layoutBinalyTree65 t = normalizePosition.fst $ decideLayout t 1 0
+layoutBinalyTree65 t = normalizePosition $ decideLayout t 1 0
     where
         mDepth = maxDepth t
-        decideLayout E _ _ = (E,0)
-        decideLayout (B x l r) currDepth here = (B (x,(currDepth,here)) placedL placedR, here)
+        decideLayout E _ _ = E
+        decideLayout (B x l r) currDepth here = B (x,(currDepth,here)) placedL placedR
             where
                 arm = if currDepth == mDepth then 0 else 2^(mDepth-currDepth-1)-1
-                (placedL,wl) = decideLayout l (currDepth+1) (here-arm-1)
-                (placedR,wr) = decideLayout r (currDepth+1) (here+arm+1)
+                placedL = decideLayout l (currDepth+1) (here-arm-1)
+                placedR = decideLayout r (currDepth+1) (here+arm+1)
 
 
 maxDepth :: (Integral a) => Tree b -> a
